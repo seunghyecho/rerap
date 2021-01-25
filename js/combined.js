@@ -5,6 +5,9 @@ $(document).ready(function(){
     console.log('header');
 })
 $(document).ready(function(){
+    console.log('sub community');
+})
+$(document).ready(function(){
     console.log('main intro');
 
     var $section08Contents = $('.section08_contents');
@@ -23,9 +26,6 @@ $(document).ready(function(){
        
     });
     
-})
-$(document).ready(function(){
-    console.log('sub community');
 })
 $(document).ready(function(){
     console.log('visual');
