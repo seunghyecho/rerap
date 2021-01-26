@@ -50,7 +50,7 @@ section {
 
                         .btn {
                             .plusBtn {
-                                color           : var(--white-color);
+                                color     : var(--white-color);
                                 box-shadow: inset 0 0 0 2em var(--purple-color);
                             }
                         }
@@ -97,10 +97,7 @@ section {
                         box-shadow     : 0 -10px 10px rgba(0, 0, 0, 0.1);
                         border         : 1px solid rgba(255, 255, 255, 0.2);
                         transition     : 0.5s;
-
                     }
-
-
 
                     .text_top {
                         font-size: var(--font-normal);
@@ -109,7 +106,6 @@ section {
                     .text_mid {
                         font-size  : var(--font-large);
                         font-weight: var(--font-bold);
-
                     }
                 }
 
@@ -155,7 +151,7 @@ section {
                     overflow: hidden;
                     margin  : 0 2.5rem;
                     width   : 50%;
-                    height  : 350px;
+                    height  : 449px;
 
                     .imgBg {
                         width            : 100%;
@@ -163,19 +159,19 @@ section {
                         background-image : url(../img/section02_img_bg.png);
                         background-repeat: no-repeat;
                         background-size  : 100%;
-                    }
+                        position         : relative;
 
-                    &::before {
-                        content          : "";
-                        position         : absolute;
-                        top              : 5px;
-                        left             : 11%;
-                        width            : 100%;
-                        height           : 100%;
-                        z-index          : -1;
-                        background-image : url(../img/section02_img.png);
-                        background-repeat: no-repeat;
-                        background-size  : 77%;
+                        .img {
+                            background-image : url(../img/section02_img.png);
+                            width            : 100%;
+                            height           : 100%;
+                            z-index          : -1;
+                            background-repeat: no-repeat;
+                            background-size  : 77%;
+                            position         : absolute;
+                            top              : 13px;
+                            left             : 83px;
+                        }
                     }
                 }
 
@@ -189,6 +185,8 @@ section {
                     display       : flex;
                     flex-direction: row;
 
+
+
                     button {
                         width           : 170px;
                         border-radius   : 30px;
@@ -197,12 +195,22 @@ section {
                         font-weight     : var(--font-bold);
                         color           : var(--white-color);
                         background-color: transparent;
+                        transition      : 0.5s;
+                        margin-right    : 1rem;
+
+
+
                     }
 
                     .btn01 {
                         background-color: var(--purple-color);
-                        margin-right    : 1rem;
 
+                        &:hover,
+                        &:focus {
+                            border    : 1px solid var(--purple-color);
+                            box-shadow: inset 0 0 0 2em var(--white-color);
+                            color     : var(--purple-color);
+                        }
                     }
                 }
             }
@@ -214,6 +222,18 @@ section {
         flex-direction : row;
         justify-content: space-between;
         align-items    : center;
+        margin-bottom  : -50px;
+        padding        : 2.5rem 6.5rem;
+
+        .midBarText {
+            transform       : scale(2);
+            transform-origin: left;
+
+            h1 {
+                font-size  : var(--font-large);
+                font-weight: var(--font-bold);
+            }
+        }
 
         button {
             width           : 170px;
@@ -223,10 +243,18 @@ section {
             font-weight     : var(--font-bold);
             background-color: transparent;
             color           : var(--purple-color);
+            transition      : 0.5s;
         }
 
         .btn02 {
             border: 1px solid var(--purple-color);
+
+            &:hover,
+            &:focus {
+                // background-color: var(--purple-color);
+                box-shadow: inset 0 0 0 2em var(--purple-color);
+                color     : var(--white-color);
+            }
         }
     }
 
@@ -1074,13 +1102,16 @@ section {
                     flex-direction: column;
 
                     .img_area {
-                        width     : 100%;
-                        min-height: 236px;
-                        height    : 236px;
+                        width : 100%;
+                        height: 270px;
 
-                        &::before {
-                            background-size: 76%;
+                        .imgBg {
+                            .img {
+                                left: 11%;
+                            }
                         }
+
+
                     }
 
                     .text_area {
