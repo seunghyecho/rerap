@@ -303,7 +303,7 @@ section {
                 }
 
                 .img04 {
-                    grid-area: 1 / 3 / 5 / 5;
+                    grid-area: 1 / 3 / 5 / 4;
                 }
 
                 .img05 {
@@ -419,6 +419,7 @@ section {
 
             .img04 {
                 // background-size: 368px 368px;
+                background-size: cover !important;
                 background-image: url(../img/section03_img04.png);
 
             }
