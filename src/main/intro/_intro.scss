@@ -641,7 +641,7 @@ section {
                     background-repeat: no-repeat;
                     position         : absolute;
                     width            : 100%;
-                    height: 562px;
+                    height           : 562px;
                     margin-top       : -17rem;
 
                     &:nth-of-type(1) {
@@ -908,6 +908,7 @@ section {
             justify-content: space-between;
             flex-direction : row;
             align-items    : center;
+            overflow       : hidden;
 
             .content_item {
                 position               : relative;
@@ -1232,12 +1233,11 @@ section {
                                 left: 11%;
                             }
                         }
-
-
                     }
 
                     .text_area {
-                        width: 100%;
+                        width  : 100%;
+                        padding: 0;
                     }
                 }
             }
@@ -1268,11 +1268,6 @@ section {
                     }
 
                     .img {
-                        background-size  : 100%;
-                        background-repeat: no-repeat;
-                        position         : relative;
-                        overflow         : hidden;
-
 
                         .hover_text {
                             padding: 1rem;
@@ -1308,13 +1303,14 @@ section {
         }
 
         &#section05 {
-            width: 100%;
+            padding: 0 var(--padding);
+            width  : 100%;
 
             .section05_contents {
                 flex-direction: column;
 
                 .img_area {
-                    padding: 50px 12px;
+                    padding: 50px 0;
                     width  : 100%;
 
                     .img {
@@ -1325,19 +1321,21 @@ section {
                 .text_area {
                     margin : 2rem 0;
                     padding: var(--padding);
+                    width  : 100%;
                 }
             }
         }
 
         &#section06 {
             width: 100%;
-            
+
 
             .section06_contents {
                 flex-direction: column-reverse;
 
                 .img_area {
                     margin: 5rem 0;
+
                     .img {
                         background-size: contain;
                     }
@@ -1345,8 +1343,8 @@ section {
                 }
 
                 .text_area {
-                    width: 100%;
-                    padding: 0 var(--padding);
+                    width        : 100%;
+                    padding      : 0 var(--padding);
                     margin-bottom: 10rem;
 
                     .section06_btn {
