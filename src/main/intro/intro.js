@@ -1,6 +1,41 @@
 $(document).ready(function () {
     console.log('main intro');
 
+    // section7,9 -------------------------------------------------------------
+    var swiper = new Swiper('.swiper-container', {
+        loop: false,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Responsive breakpoints   
+        breakpoints: {
+
+            // when window width is <= 320px     
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            // when window width is <= 480px     
+            1000: {       
+               slidesPerView: 4,       
+               spaceBetween: 30     
+            },   
+
+            // when window width is <= 640px     
+            // 640: {       
+            //    slidesPerView: 3,       
+            //    spaceBetween: 30     
+            // } 
+
+        }
+    });
+
+    // section2,5,6 -----------------------------------------------------------
+
     var $sectionList = $('#section02,#section05,#section06');
     var sectionTop = []
     $sectionList.each(function (i, el) {
@@ -11,12 +46,11 @@ $(document).ready(function () {
 
 
     function scrollAppear() {
-        // section2,5,6
         var windowHeight = $(window).innerHeight();
         var scrollTop = $(window).scrollTop();
 
         // console.log(sectionTop, windowHeight, scrollTop)
-        for(i=0;i<sectionTop.length;i++){
+        for (i = 0; i < sectionTop.length; i++) {
             // console.log(sectionTop[i])
             if (scrollTop + windowHeight * rate > sectionTop[i]) {
                 $($sectionList[i]).addClass('intro_appear');

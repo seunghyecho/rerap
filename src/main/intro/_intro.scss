@@ -5,6 +5,13 @@ section {
     box-sizing: border-box;
     transition: 0.5s;
 
+    .swiper-container {
+    }
+    .swiper-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .appeared {
         width     : 50%;
         padding   : 2.5rem;
@@ -737,18 +744,20 @@ section {
 
     &#section07 {
         padding: 6.5rem;
+        overflow: hidden;
 
         .section07_contents {
             padding        : 1.5rem 0;
             display        : flex;
             justify-content: space-between;
             align-items    : center;
-            overflow-x     : hidden;
+            
 
             .content_item {
                 padding   : 1.5rem;
                 margin    : 0 0.5rem;
                 position  : relative;
+                width: 270px !important;
                 height    : 400px;
                 box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.0994678);
                 transition: 0.5s;
@@ -908,9 +917,10 @@ section {
             justify-content: space-between;
             flex-direction : row;
             align-items    : center;
-            overflow       : hidden;
 
             .content_item {
+                
+                width: 270px !important;
                 position               : relative;
                 box-shadow             : 8px 8px 48px rgba(0, 0, 0, 0.0994678);
                 background-color       : var(--white-color);
@@ -943,6 +953,7 @@ section {
                 }
 
                 &:nth-of-type(4) {
+                    margin-right: 0 !important;
                     .img {
                         background-image: url(../img/Rectangle04.png);
                     }
@@ -950,7 +961,6 @@ section {
             }
 
             .img {
-                width            : 270px;
                 height           : 288px;
                 background-repeat: no-repeat;
                 background-size  : cover;
@@ -1197,6 +1207,16 @@ section {
 
     section {
         width: 100%;
+        position: relative;
+
+        .swiper-container {
+            height: 100%;
+            overflow: unset !important;
+          }
+      
+          .swiper-slide {
+            width: 270px !important;
+          }
 
         &#section01 {
             padding: 0 var(--padding);
@@ -1363,6 +1383,10 @@ section {
 
             padding-left : var(--padding);
             padding-right: var(--padding);
+
+            .section07_contents {
+                width: auto;
+            }
         }
 
         &#section08 {
@@ -1396,6 +1420,7 @@ section {
             padding-right: var(--padding);
 
             .section09_contents {
+
                 .content_item {
                     margin-right: 1rem;
                 }
