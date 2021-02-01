@@ -81,14 +81,14 @@
 
         button {
             background-color: transparent;
-            margin: 0.5rem;
+            margin          : 0.5rem;
 
             i {
                 font-size  : var(--font-large);
                 font-weight: var(--font-bold);
                 color      : var(--white-color);
 
-                &.fa-times{
+                &.fa-times {
                     font-size: 38px;
                 }
             }
@@ -101,21 +101,21 @@
         }
 
         .inner {
-            top: 50%;
-            left: 50%;
+            top      : 50%;
+            left     : 50%;
             transform: translate(-50%, -50%);
-            width: 30%;
-            height: auto;
-            position: absolute;
+            width    : 30%;
+            height   : auto;
+            position : absolute;
 
             input {
-                height             : 20%;
-                background-color   : unset;
-                position           : relative;
-                font-size          : var(--font-large);
-                font-weight        : var(--font-bold);
-                color              : var(--white-color);
-                border-bottom: 2px solid var(--white-color);
+                height          : 20%;
+                background-color: unset;
+                position        : relative;
+                font-size       : var(--font-large);
+                font-weight     : var(--font-bold);
+                color           : var(--white-color);
+                border-bottom   : 2px solid var(--white-color);
 
 
                 &::before {
@@ -137,31 +137,37 @@
                 }
             }
 
-           
+
         }
 
-        &.gnb{
+        &.gnb {
             background-color: var(--black-color);
-            
-            button{
+
+            button {
                 position: absolute;
-                right: 0;
-               }
-            #gnb{
-                padding: 1rem 0;
-                li{
-                    width: 100%;
-                    height: 80px;
-                    line-height: 80px;
-                    text-align: center;
+                right   : 1rem;
+            }
 
-                    a{
-                        display: block;
+            #gnb {
+                top      : 50%;
+                left     : 50%;
+                transform: translate(-50%, -50%);
+                position : absolute;
+                width    : 100%;
+
+                li {
+                    width      : 100%;
+                    height     : 100px;
+                    line-height: 100px;
+                    text-align : center;
+
+                    a {
+                        display  : block;
                         font-size: var(--font-large);
-                        color: var(--white-color);
+                        color    : var(--white-color);
 
-                        &:hover{
-                        color: var(--purple-color);
+                        &:hover {
+                            color: var(--purple-color);
 
                         }
                     }
@@ -207,18 +213,18 @@
             bottom          : 0;
             left            : 0;
             right           : 0;
-            height: 100vh;
+            height          : 100vh;
             background-color: rgba(0, 0, 0, 0.5);
             z-index         : 9;
-            
-    
+
+
             .inner {
                 top      : 50%;
                 left     : 50%;
                 transform: translate(-50%, -50%);
                 width    : 90%;
                 height   : 50%;
-    
+
                 input {
                     height             : 20%;
                     background-color   : unset;
@@ -227,7 +233,7 @@
                     font-weight        : var(--font-bold);
                     color              : var(--white-color);
                     border-bottom-style: 2px solid var(--white-color);
-    
+
                     &::before {
                         content         : "";
                         position        : absolute;
@@ -235,39 +241,40 @@
                         height          : 2px;
                         background-color: var(--white-color);
                     }
-    
+
                     &::placeholder {
                         font-size  : var(--font-large);
                         font-weight: var(--font-bold);
                         color      : var(--white-color);
                     }
-    
+
                     &:focus {
                         border-bottom: 2px solid var(--white-color);
                     }
                 }
             }
 
-            &.gnb{
+            &.gnb {
                 background-color: var(--black-color);
-                
-                button{
+
+                button {
                     position: absolute;
-                    right: 0;
-                   }
-                #gnb{
+                    right   : 0;
+                }
 
-                    li{
-                        width: 100%;
-                        height: 80px;
+                #gnb {
+
+                    li {
+                        width      : 100%;
+                        height     : 80px;
                         line-height: 80px;
-                        text-align: center;
+                        text-align : center;
 
-                    
 
-                        a{
+
+                        a {
                             display: block;
-                            color: var(--white-color);
+                            color  : var(--white-color);
                         }
                     }
                 }
