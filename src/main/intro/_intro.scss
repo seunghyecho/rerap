@@ -1290,7 +1290,6 @@ section {
 
         .swiper-container {
             height  : 100%;
-            overflow: unset !important;
         }
 
         .swiper-slide {
@@ -1316,6 +1315,7 @@ section {
         }
 
         &#section02 {
+            overflow-x: hidden;
 
             .container_oval{
                 span{
