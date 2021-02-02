@@ -5,7 +5,7 @@ $(document).ready(function () {
     var swiper = new Swiper('.swiper-container', {
         loop: false,
         slidesPerView: 1,
-        spaceBetween: 30,
+        // spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -16,7 +16,9 @@ $(document).ready(function () {
 
             // when window width is <= 320px     
             320: {
-                slidesPerView: 2,
+                slidesPerView: 1,
+                // spaceBetween: 30,
+
             },
             // when window width is <= 480px     
             1024: {
