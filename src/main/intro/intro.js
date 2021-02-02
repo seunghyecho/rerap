@@ -4,7 +4,7 @@ $(document).ready(function () {
     // section7,9 -------------------------------------------------------------
     var swiper = new Swiper('.swiper-container', {
         loop: false,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
@@ -16,21 +16,12 @@ $(document).ready(function () {
 
             // when window width is <= 320px     
             320: {
-                slidesPerView: 1,
-                spaceBetween: 30
+                slidesPerView: 2,
             },
             // when window width is <= 480px     
-            1000: {       
-               slidesPerView: 4,       
-               spaceBetween: 30     
-            },   
-
-            // when window width is <= 640px     
-            // 640: {       
-            //    slidesPerView: 3,       
-            //    spaceBetween: 30     
-            // } 
-
+            1024: {
+                slidesPerView: 4,
+            },
         }
     });
 
