@@ -47,14 +47,11 @@ $(document).ready(function () {
 
         // Responsive breakpoints   
         breakpoints: {
-
-            // when window width is <= 320px     
             320: {
                 slidesPerView: 1,
                 // spaceBetween: 30,
 
             },
-            // when window width is <= 480px     
             1024: {
                 slidesPerView: 4,
             },
@@ -111,6 +108,9 @@ $(document).ready(function () {
 
 
 })
+$(document).ready(function(){
+    console.log('sub community');
+})
 $(document).ready(function () {
     console.log('visual');
 
@@ -142,7 +142,4 @@ $(document).ready(function () {
     $($leftBtn).on('click', function () {
         prevSlide();
     });
-})
-$(document).ready(function(){
-    console.log('sub community');
 })
