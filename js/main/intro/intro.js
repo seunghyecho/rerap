@@ -2,21 +2,37 @@ $(document).ready(function () {
     console.log('main intro');
 
     // section7,9 -------------------------------------------------------------
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.section07-slide', {
         loop: false,
-        slidesPerView: 1,
+        // slidesPerView: 1,
         // spaceBetween: 30,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
 
         // Responsive breakpoints   
         breakpoints: {
             320: {
-                slidesPerView: 1,
-                // spaceBetween: 30,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                // slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        }
+    });
 
+    var swiper = new Swiper('.section09-slide', {
+        loop: false,
+        // slidesPerView: 1,
+        // spaceBetween: 30,
+
+        // Responsive breakpoints   
+        breakpoints: {
+            320: {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                // slidesPerView: 1,
+                spaceBetween: 20,
             },
             1024: {
                 slidesPerView: 4,

@@ -7,7 +7,6 @@ $(document).ready(function(){
     var $overlaySearch = $('.overlay.search');
     var $overlayGnb = $('.overlay.gnb');
     var $closeBtn = $('.closeBtn');
-    console.log($closeBtn)
 
     $($overlay).hide();
 

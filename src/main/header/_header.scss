@@ -89,7 +89,8 @@
                 color      : var(--white-color);
 
                 &.fa-times {
-                    font-size: 38px;
+                    font-size: 2rem;
+
                 }
             }
 
@@ -260,7 +261,7 @@
                 button {
                     position: absolute;
                     right   : 0;
-                    z-index: 1;
+                    z-index : 1;
                 }
 
                 #gnb {
