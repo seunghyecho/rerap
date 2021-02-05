@@ -3,6 +3,16 @@ var _FOCUS = 1;
 $(document).ready(function () {
     console.log('header');
 
+    //headerTop fixed
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 80) {
+            $('#header').addClass('sticky');
+        }else{
+            $('#header').removeClass('sticky');
+        }
+    });
+
+
     // Smooth Anchor Scroll
     var $gnb = $('#gnb');
     $gnb.on('click', function (e) {
@@ -19,7 +29,7 @@ $(document).ready(function () {
         var _focusId = _this.getAttribute("href");
         var _focusNo = _focusId.replace('#section', ' ');
 
-        console.log(_focusId, _focusNo); 
+        console.log(_focusId, _focusNo);
         //#section01, 1
         //#section03, 3
         //#section05, 5
