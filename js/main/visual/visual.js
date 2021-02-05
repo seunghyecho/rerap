@@ -22,11 +22,15 @@ $(document).ready(function () {
         $($innerItem[i]).addClass('active');
     }
 
+    //button click slide
     $($rightBtn).on('click', function () {
         nextSlide();
     });
-
     $($leftBtn).on('click', function () {
         prevSlide();
     });
+
+    //auto slide
+    setInterval( nextSlide, 5000);
+
 })
