@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     // section2,5,6 -----------------------------------------------------------
 
-    var $sectionList = $('#section02,#section05,#section06');
+    var $sectionList = $('#section2,#section5,#section6');
     var sectionTop = []
     $sectionList.each(function (i, el) {
         sectionTop.push($(el).offset().top)

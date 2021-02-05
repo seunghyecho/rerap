@@ -1,6 +1,8 @@
 $(document).ready(function(){
     console.log('footer');
 })
+var _FOCUS = 1;
+
 $(document).ready(function () {
     console.log('header');
 
@@ -8,17 +10,54 @@ $(document).ready(function () {
     var $gnb = $('#gnb');
     $gnb.on('click', function (e) {
 
+        //방법01----------------------------------------------------------
         // var targetId = e.target.getAttribute("href");
         // window.scrollTo({
         //     top: targetId === "#" ? 0 : document.querySelector(targetId).offsetTop,
         //     behavior: "smooth"
         // });
 
+        //방법02----------------------------------------------------------
         var _this = e.target;
         var _focusId = _this.getAttribute("href");
+        var _focusNo = _focusId.replace('#section', ' ');
+
+        console.log(_focusId, _focusNo); 
+        //#section01, 1
+        //#section03, 3
+        //#section05, 5
+        //#section09, 9
+        //#section11, 11
+
         var _heigth = $(_focusId).offset();
 
-        $('body').animate({ scrollTop: _heigth.top }, 1000);
+        if (!$('body').is(':animated')) {
+            var _time = 500;
+            var _timer = _time * (_focusNo - _FOCUS);
+            console.log(_focusNo, _FOCUS, _timer)
+
+            //_timer
+            //500 * (1 - 1) = 0
+            //500 * (3 - 1) = 1000
+            //500 * (5 - 3) = 1000
+            //500 * (9 - 5) = 2000
+            //500 * (11 - 9) = 1000
+            //500 * (11 - 11) = 0
+            //500 * (9 - 11) = -1000
+            //500 * (5 - 9) = -2000
+            //500 * (3 - 5) = -1000
+            //500 * (1 - 3) = -1000
+            //500 * (1 - 1) = 0
+
+            if (_timer < 0) {
+                _timer = _time * (_FOCUS - _focusNo);
+            }
+
+            $('body').animate({ scrollTop: _heigth.top }, _timer);
+            _FOCUS = _focusNo;
+
+        }
+
 
     });
 
@@ -93,7 +132,7 @@ $(document).ready(function () {
 
     // section2,5,6 -----------------------------------------------------------
 
-    var $sectionList = $('#section02,#section05,#section06');
+    var $sectionList = $('#section2,#section5,#section6');
     var sectionTop = []
     $sectionList.each(function (i, el) {
         sectionTop.push($(el).offset().top)
